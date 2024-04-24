@@ -9,13 +9,13 @@
 typedef std::deque<std::string> Prefix;
 
 class TextGen {
-public: 
+ public:
     TextGen();
     ~TextGen();
     void TextProcessing(const std::string&, int prefixLength);
     std::string GenerateText(int maxSize);
     std::map<Prefix, std::vector<std::string>> statetab;
-private: 
+ private:
     std::vector<std::string> splitText(const std::string&);
     Prefix startPrefix;
 };
