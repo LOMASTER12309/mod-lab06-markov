@@ -1,7 +1,7 @@
 // Copyright 2024 Yuriy Nazarov
+#include <gtest/gtest.h>
 #include <iostream>
 #include <fstream>
-#include <gtest/gtest.h>
 #include "../include/textgen.h"
 
 std::string ReadTextFromFile(const std::string& filename) {
@@ -14,8 +14,7 @@ std::string ReadTextFromFile(const std::string& filename) {
         }
         result.pop_back();
         in.close();
-    }
-    else {
+    } else {
         std::cout << "File not found";
     }
     return result;

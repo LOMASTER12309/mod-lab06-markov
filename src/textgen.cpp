@@ -14,7 +14,8 @@ std::vector<std::string> TextGen::splitText(const std::string& text) {
     std::vector<std::string> words;
     std::string curWord;
     for (char symbol : text) {
-        if (std::find(delimiters, delimiters + 6, symbol) == std::end(delimiters)) {
+        if (std::find(delimiters, delimiters + 6, symbol) == 
+        std::end(delimiters)) {
             curWord += symbol;
         } else {
             if (!curWord.empty()) {
